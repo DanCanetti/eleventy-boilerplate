@@ -1,5 +1,6 @@
 {
-    "siteTitle"     : "Eleventy Boilerplate",
-    "url"           : "https://eleventyboilerplate-demourl.com",
-    "twitterHandle" : "@demotwitterhandle"
+    "siteTitle"         : "Eleventy Boilerplate",
+    "url"               : "https://thisboilerplate.rocks",
+    "twitterHandle"     : "@Dan_Canetti",
+    "instagramHandle"   : "@Dan_Canetti"
 }
