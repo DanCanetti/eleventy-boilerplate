@@ -1,9 +1,9 @@
 ---
 layout: layout.liquid
-pageTitle: Eleventy Boilerplate
+pageTitle: An Eleventy and webpack boilerplate
 pageClass: home
 pageFeatureImage: /dist/images/feature.jpg
-pageDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in euismod quam.
+pageDesc: An off the shelf Eleventy boilerplate with webpack and ready-to-use styling.
 ---
 
 <div class="body">
@@ -11,21 +11,32 @@ pageDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in euismod
       <p>Welcome to the Eleventy Boilerplate. Quick and easy to use with styling already in place, see the <a href="/blog/ready-to-use-styling/">Ready to use styling page</a> for more.</p>
       <h2>How to use</h2>
       <ul class="toc">
-        <li>Clone <a href="https://github.com/DanCanetti/eleventy-boilerplate.git">the repo</a>.</li>
+        <li>Clone <a href="https://github.com/DanCanetti/eleventy-boilerplate.git" target="_blank">the repo</a>.</li>
         <li>Run <code>npm install</code>.</li>
         <li><code>npm run serve</code> will run both Webpack and Eleventy.</li>
         <li>Open the site locally at <code>http://localhost:8080</code>.</li>
       </ul>
+      <p>Once live, update the <code>_data/siteInfo.json</code> file with your details and you're good to go.</p>
       <h2>The tech</h2>
-      <p>This boilerplate is build using <a href="http://eleventy.dev/">Eleventy</a> (obviously) and <a href="https://webpack.js.org/">webpack</a>. Checkout their docs if you need more information on these technologies.</p>
-      <p>Visit the <a href="https://www.11ty.dev/docs/">Eleventy Docs</a>.</p>
-      <p>Visit the <a href="https://webpack.js.org/guides/">Webpack Docs</a>.</p>
+      <p>This boilerplate is build using <a href="http://eleventy.dev/" target="_blank">Eleventy</a> (obviously) and <a href="https://webpack.js.org/" target="_blank">webpack</a>. Checkout their docs if you need more information on these technologies.</p>
+      <p>Visit the <a href="https://www.11ty.dev/docs/" target="_blank">Eleventy Docs</a>.</p>
+      <p>Visit the <a href="https://webpack.js.org/guides/" target="_blank">Webpack Docs</a>.</p>
+      <p>Visit the <a href="https://sass-lang.com/documentation" target="_blank">Sass Docs</a>.</p>
+      <h2>Bonus features</h2>
+      <ul class="toc">
+        <li>Custom 404 page. <a href="https://docs.github.com/en/github/working-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site" target="_blank">Learn more</a>.</li>
+        <li>Auto generating sitemap. <a href="https://www.belter.io/eleventy-sitemap/" target="_blank">Learn more</a>.</li>
+        <li>Form validation with <a href="https://parsleyjs.org/" target="_blank">Parsley JS</a>.</li>
+        <li>Built in social share section on bog posts.</li>
+        <li>Optional canonical tag on posts.</li>
+      </ul>
       <hr>
+      <h2>Boilerplate Tips &amp; Tricks</h2>
       <div class="post-items__wrap">
       {% assign allblogposts = collections.posts %}
       {% for post in allblogposts limit: 4 %}
         <div class="post-item">
-          <h2><a href="{{ post.url }}" title="Read {{ post.data.pageTitle }}">{{ post.data.pageTitle }}</a></h2>
+          <h3><a href="{{ post.url }}" title="Read {{ post.data.pageTitle }}">{{ post.data.pageTitle }}</a></h3>
           <p>{{ post.data.pageExcerpt }}</p>
           <a href="{{ post.url }}">Read More</a>
         </div>

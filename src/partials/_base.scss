@@ -8,13 +8,13 @@
 @import 'reset';
 
 // Colour Variables
-$primary:   #111;      // Black
+$primary:   #111;       // Black
 $secondary:  #fff;      // White
-$tertiary:  #800e13;   // Alt
+$tertiary:  #800e13;    // Alt
 
 // Spacing Variables
-$maxwidth:    1000px;   // Max Width
-$ds:          50px;     // Default spacing
+$maxwidth:    750px;      // Max Width
+$ds:          50px;       // Default spacing
 
 // Media Queries
 $screen-sm:   576px;
@@ -115,7 +115,6 @@ h3 {
     font-weight: $fontbold;
     font-size: 1.75rem;
     letter-spacing: .05rem;
-    margin: 0 0 calc(#{$ds} / 2);
 }
 
 p {
@@ -138,6 +137,14 @@ a {
       cursor: pointer;
       text-decoration-thickness: 2px;
     }
+}
+
+ul, ol {
+  padding-left: 20px;
+  li {
+    font-size: 1.25rem;
+    margin-top: calc(#{$ds} / 2);
+  }
 }
 
 abbr {

@@ -14,10 +14,14 @@
   </url>
   
   <url>
+    <loc>/blog/update-favicon/</loc>
+  </url>
+  
+  <url>
     <loc>/blog/ready-to-use-styling/</loc>
   </url>
   
   <url>
-    <loc>/blog/demo/</loc>
+    <loc>/blog/github-pages/</loc>
   </url>
 </urlset>

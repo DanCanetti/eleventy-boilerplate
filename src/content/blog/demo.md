@@ -5,6 +5,7 @@ pageFeatureImageRetina: /dist/images/demopost@2x.jpg
 pageExcerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in euismod quam. Cras mollis ligula ut ex eleifend, a aliquet risus lobortis.
 postTag: Demo
 date: Last Modified
+eleventyExcludeFromCollections: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis orci dignissim, maximus tortor ac, ullamcorper dolor. Nam et tempus felis. Duis sit amet felis ac orci porttitor vestibulum vel vel arcu. Fusce finibus placerat lorem, sit amet ultricies tellus consectetur vitae. Nullam at aliquam ipsum. Fusce ut scelerisque libero. Donec egestas, magna et porttitor viverra, nisl purus faucibus ex, id vulputate tellus mauris vitae neque. Maecenas ante ex, congue vitae suscipit vitae, finibus non ante. Cras mattis pretium lacus, ultrices pulvinar magna venenatis vestibulum. Fusce ullamcorper ligula quis sagittis faucibus. Fusce a libero at augue auctor fermentum. Nunc eu laoreet magna. Nulla in enim venenatis, mattis nibh nec, luctus lorem.

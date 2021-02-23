@@ -2,7 +2,7 @@
 pageTitle: Ready to use styling
 pageFeatureImage: /dist/images/demopost.jpg
 pageFeatureImageRetina: /dist/images/demopost@2x.jpg
-pageExcerpt: All default styling displayed here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in euismod quam. Cras mollis ligula ut ex eleifend, a aliquet risus lobortis.
+pageExcerpt: All default styling displayed available with Eleventy Boilerplate.
 postTag: Styling
 date: Last Modified
 ---
@@ -28,7 +28,7 @@ Maecenas fringilla varius.
 
 This is a paragraph with `some code in it` and a <mark>marked</mark> bit of copy. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in euismod quam. Cras mollis ligula ut ex eleifend, a aliquet risus lobortis. Fusce risus justo, faucibus vitae commodo quis, ultricies quis nunc. Nam ante erat, convallis id dapibus suscipit, lobortis nec dui. Maecenas fringilla varius tortor scelerisque facilisis. Nunc sed dui sem. Donec mauris libero, dapibus at venenatis ut, tincidunt vitae mi.
 
-![This is an image](/dist/images/demopost.jpg)
+![Random image from @vanschneider via Unsplash API](https://source.unsplash.com/user/vanschneider/1600x900)
 
 This is a paragraph with a <a href="#">link in it</a>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in euismod quam. Cras mollis ligula ut ex eleifend, a aliquet risus lobortis. Fusce risus justo, faucibus vitae commodo quis, ultricies quis nunc. Nam ante erat, convallis id dapibus suscipit, lobortis nec dui. Maecenas fringilla varius tortor scelerisque facilisis. Nunc sed dui sem. Donec mauris libero, dapibus at venenatis ut, tincidunt vitae mi.
 
@@ -62,7 +62,7 @@ This is a paragraph with a <abbr title="abbreviation">abbr</abbr>. Lorem ipsum d
     <div class="form-group">
         <fieldset class="terms">
             <input type="checkbox" id="termsandconditions" name="termsandconditions" value="formterms" data-parsley-required="true" data-parsley-required-message="Please accept the terms and conditions.">
-            <label for="termsandconditions" class="terms">I agree to your <a href="#">terms &amp; conditions</a> and <a href="#">privacy policy</a><sup>*</sup></label>
+            <label for="termsandconditions" class="terms">I agree to your <a href="#">terms &amp; conditions</a>.</label>
         </fieldset>
     </div>
     <div class="form-group">

@@ -25,9 +25,9 @@ nav {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: calc(#{$ds} * 2); 
+  margin-bottom: $ds; 
   @include sm {
-    margin-bottom: calc(#{$ds} * 4);
+    margin-bottom: calc(#{$ds} * 2);
   }
   ul {
     list-style: none;
