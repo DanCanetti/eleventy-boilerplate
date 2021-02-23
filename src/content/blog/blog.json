@@ -1,5 +1,5 @@
 {
-    "layout": "post.liquid",
-    "pageClass": "sub post",
+    "layout": "layout.liquid",
+    "pageClass": "post",
     "tags": ["posts"]
 }

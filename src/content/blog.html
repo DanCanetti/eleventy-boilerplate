@@ -1,46 +1,22 @@
 ---
-layout: sub.liquid
+layout: layout.liquid
 pageTitle: Blog
 pageClass: sub
-pageDesc: Tutorials, thoughts on tech culture, dev and business tools. Here's where I share my web development experiences and musings from my life.
+pageDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in euismod quam.
 ---
 
-<div class="body body--sub body--sub--blog">
-  <div class="body__section body__section--case-study-items body__section--case-study-items--blog body__section--fade">
-    <div class="filter-posts">
-      <select class="filter-posts__select">
-        <option selected disabled>Filter</option>
-        <option value="tag-all">All Posts</option>
-        <option value="tag-web-development">Web Development</option>
-        <option value="tag-life">Life</option>
-        <option value="tag-culture">Culture</option>
-        <option value="tag-hackathon">Hackathon</option>
-      </select>
-    </div>
-    {% assign allblogposts = collections.posts | reverse %}
-    {% for post in allblogposts %}  
-      <a href="{{ post.url }}" class="case-study-item case-study-item--hover case-study-item--post tag-{{ post.data.postTag | downcase | replace: " ", "-" }}">
-        <div class="case-study-item__img">
-          <div class="case-study-item__img__image">
-              {% if post.data.postFeatureImage %}
-              <img src="{{ post.data.postFeatureImage }}" srcset="{{ post.data.postFeatureImageRetina }} 2x" alt="" aria-label="Read More" />
-              {% else %}
-              <img src="/dist/images/feature.jpg" alt="" aria-label="Read More" />
-              {% endif %}
-          </div>
+<div class="body">
+  <div class="body__section">
+    <p>This is a loop through all the posts.</p>
+    <div class="post-items__wrap">
+      {% assign allblogposts = collections.posts %}
+      {% for post in allblogposts limit: 4 %}
+        <div class="post-item">
+          <h2><a href="{{ post.url }}" title="Read {{ post.data.pageTitle }}">{{ post.data.pageTitle }}</a></h2>
+          <p>{{ post.data.pageExcerpt }}</p>
+          <a href="{{ post.url }}">Read More</a>
         </div>
-        <div class="case-study-item__data">
-          <div class="case-study-item__data--content">
-            <div class="case-study-item__meta">
-              <span>{{ post.data.postTag }}</span>
-              <span>{{ post.date | date: '%B %d, %Y' }}</span>
-            </div>
-            <div class="case-study-item__copy">
-              <h2>{{ post.data.postTitle }}</h2>
-            </div>
-          </div>
-        </div>
-      </a>
-      {% endfor %}
+        {% endfor %}
+      </div>
   </div>
 </div>

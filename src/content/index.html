@@ -1,49 +1,35 @@
 ---
 layout: layout.liquid
-pageTitle: A Yorkshire based Front-end Web Developer.
+pageTitle: Eleventy Boilerplate
 pageClass: home
 pageFeatureImage: /dist/images/feature.jpg
-pageDesc: A developer with a broad skillset living and working in Yorkshire, England. I've worked on projects ranging from quick WordPress websites to fully bespoke builds.
+pageDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in euismod quam.
 ---
 
-<div class="body body--home">
-    <div class="body__section body__section--intro body__section--fade">
-      <div class="body__section--intro__face">
-        <img id="face" src="/dist/images/facemask.png" alt="" />
-      </div>
-      <h1>A Front-end Web Developer living and working in Yorkshire, England. Currently the front-end developer for Nouveau HD Beauty Group, a permanent makeup training company.</h1>
-    </div>
+<div class="body">
     <div class="body__section">
-      <h2 class="sml">Work.</h2>
-      <div class="case-study-items__wrap">
-      {% for post in collections.selectedproject %}
-        <div class="case-study-item case-study-item--home">
-          <div class="case-study-item__data">
-            <div class="case-study-item__data--content">
-              <h2><a href="{{ post.url }}" class="l">{{ post.data.pageTitle }}</a></h2>
-              <p>{{ post.data.projectExcerpt }}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-      <a href="/work/" class="l" >View All</a>
-    </div>
-    <div class="body__section">
-      <h2 class="sml">Blog.</h2>
-      <div class="case-study-items__wrap">
+      <p>Welcome to the Eleventy Boilerplate. Quick and easy to use with styling already in place, see the <a href="/blog/ready-to-use-styling/">Ready to use styling page</a> for more.</p>
+      <h2>How to use</h2>
+      <ul class="toc">
+        <li>Clone <a href="https://github.com/DanCanetti/eleventy-boilerplate.git">the repo</a>.</li>
+        <li>Run <code>npm install</code>.</li>
+        <li><code>npm run serve</code> will run both Webpack and Eleventy.</li>
+        <li>Open the site locally at <code>http://localhost:8080</code>.</li>
+      </ul>
+      <h2>The tech</h2>
+      <p>This boilerplate is build using <a href="http://eleventy.dev/">Eleventy</a> (obviously) and <a href="https://webpack.js.org/">webpack</a>. Checkout their docs if you need more information on these technologies.</p>
+      <p>Visit the <a href="https://www.11ty.dev/docs/">Eleventy Docs</a>.</p>
+      <p>Visit the <a href="https://webpack.js.org/guides/">Webpack Docs</a>.</p>
+      <hr>
+      <div class="post-items__wrap">
       {% assign allblogposts = collections.posts %}
       {% for post in allblogposts limit: 4 %}
-        <div class="case-study-item case-study-item--post case-study-item--home">
-          <div class="case-study-item__data">
-            <div class="case-study-item__data--content">
-              <h2><a href="{{ post.url }}" class="l" title="Read {{ post.data.postTitle }}">{{ post.data.postTitle }}</a></h2>
-              <p>{{ post.data.postExcerpt }}</p>
-            </div>
-          </div>
+        <div class="post-item">
+          <h2><a href="{{ post.url }}" title="Read {{ post.data.pageTitle }}">{{ post.data.pageTitle }}</a></h2>
+          <p>{{ post.data.pageExcerpt }}</p>
+          <a href="{{ post.url }}">Read More</a>
         </div>
         {% endfor %}
       </div>
-      <a href="/blog/" class="l" >View All</a>
     </div>
 </div>

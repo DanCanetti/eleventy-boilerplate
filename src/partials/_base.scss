@@ -8,32 +8,24 @@
 @import 'reset';
 
 // Colour Variables
-$dancanettiblack:   #111;         // Black
-$dancanettigrey:    #f0f0f0;      // Grey
-$dancanettiwhite:   #fff;         // White
-$dancanettialt:     #F92A82;      // Alt
-
-// Social 
-$dribbble:          #ea4c89;      // Dribbble
-$instagram:         #d00376;      // Instagram
-$twitter:           #00aced;      // Twitter
-$linkedin:          #0e76a8;      // LinkedIn
+$primary:   #111;      // Black
+$secondary:  #fff;      // White
+$tertiary:  #800e13;   // Alt
 
 // Spacing Variables
-$maxwidth:       1250px;
-$maxwidthnarrow: 1000px;
-$ds:             75px;
+$maxwidth:    1000px;   // Max Width
+$ds:          50px;     // Default spacing
 
 // Media Queries
-$screen-sm: 576px;
-$screen-md: 1025px;
+$screen-sm:   576px;
+$screen-md:   1025px;
 @mixin sm {
-   @media (max-width: #{$screen-sm}) {
+   @media (min-width: #{$screen-sm}) {
        @content;
    }
 }
 @mixin md {
-  @media (max-width: #{$screen-md}) {
+  @media (min-width: #{$screen-md}) {
       @content;
   }
 }
@@ -54,13 +46,6 @@ $screen-md: 1025px;
 }
 
 // Animation
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .3s ease-in-out;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-
 @keyframes fade-in {      // Fade In
   0% {
     opacity: 0;
@@ -73,64 +58,25 @@ $screen-md: 1025px;
   }
 }
 
-@keyframes fade-in-up {    // Fade In Up
-  0% {
-    opacity: 0;
-    margin-top: 25px;
-  }
-  25% {
-    opacity: 0;
-    margin-top: 25px;
-  }
-  100% {
-    opacity: 1;
-    margin-top: 0px;
-  }
-}
-
-@keyframes fade-in-up-img {    // Fade In Up Image
-  0% {
-    opacity: 0;
-    margin-top: -125px;
-  }
-  25% {
-    opacity: 0;
-    margin-top: -125px;
-  }
-  100% {
-    opacity: 1;
-    margin-top: -150px;
-  }
-}
-
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 $pfont:       'Karla', sans-serif;
-$pfontreg:    400;
-$pfontbold:   700;
 
 // Serif
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
-$serif:       'Roboto Slab', serif;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+$serif:       'Playfair Display', serif;
 
 // Monospace
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 $mono:       'JetBrains Mono', monospace;
-$monoreg:    400;
-$monobold:   800;
+
+$fontreg:    400;
+$fontbold:   700;
 
 // Basics
-html {
-  background-color: $dancanettiblack;
-}
-
 body {
   font-family: $pfont;
-  font-weight: $pfontreg;
-  background-color: $dancanettiblack;
-  padding-bottom: 0px;
-  max-width: 1750px;
-  margin: auto;
+  font-weight: $fontreg;
 }
 
 // Smooth Scrolling
@@ -140,240 +86,137 @@ body {
 	}
 }
 
-
-// Day/Night Toggle
-#wrapper {
-  background-color: $dancanettiwhite;
-  color: $dancanettiblack;
-  @include transitionall(.3s);
-  a {
-    color: $dancanettiblack;
-    @include transitionall(.3s);
-  }
-  .body__section--post-tag {
-    background: $dancanettiblack;
-    color: $dancanettiwhite;
-  }
-  hr {
-    border: 1px solid rgba(17,17,17,0.4);
-  }
-  code {
-    background: rgba(0,0,0,0.1);
-  }
-  pre {
-    background: rgba(0,0,0,0.1);
-    code {
-      background: transparent;
-    }
-  }
-  &.night {
-    background-color: $dancanettiblack;
-    color: $dancanettiwhite;
-    a {
-      color: $dancanettiwhite;
-      &.l {
-        &.alt {
-          color: $dancanettialt;
-        }
-      }
-    }
-    .body__section--post-tag {
-      background: $dancanettiwhite;
-      color: $dancanettiblack;
-    }
-    hr {
-      border: 1px solid rgba(255,255,255,0.4);
-    }
-    code {
-      background: rgba(255,255,255,0.1);
-    }
-    pre {
-      background: rgba(255,255,255,0.1);
-      code {
-        background: transparent;
-      }
-    }
-  }
-}
-
-h1 {
-    //font-family: $header;
-    font-size: 4rem;
-    text-align: left;
-    text-transform: uppercase;
-    padding: 5vh 0;
-    margin: 0;
+// Defaults
+h1, .site-title {
+    font-family: $serif;
+    font-weight: $fontbold;
+    font-size: 3rem;
+    display: block;
+    margin: 0 0 calc(#{$ds} / 2);
     line-height: 1.25;
     @include sm {
-        font-size: 3rem;
-    }
-    &.--sub {
-      position: absolute;
-      top: 0;
-      left: 0;
-      font-size: 0;
+        font-size: 4rem;
     }
 }
 
 h2 {
     @extend h1;
-    font-family: $pfont;
+    font-weight: $fontreg;
     font-size: 2.5rem;
-    letter-spacing: .25rem;
-    padding: 0;
-    //margin: 0 0 $ds 0;   
-    &.sml {
-      font-size: 1.6rem;
-      margin-bottom: 30px;
-      letter-spacing: .05rem;
-      text-transform: capitalize;
-    } 
+    margin-top: $ds;
+    @include sm {
+      font-size: 3rem;
+  }
 }
 
 h3 {
     @extend h2;
     font-family: $pfont;
-    font-weight: $pfontbold;
-    text-transform: unset;
+    font-weight: $fontbold;
     font-size: 1.75rem;
     letter-spacing: .05rem;
+    margin: 0 0 calc(#{$ds} / 2);
 }
 
 p {
     font-size: 1.25rem;
     line-height: 1.4;
-    margin-top: 30px;
-    img {
-      & + strong {
-        font-size: .75rem;
-      }
+    margin-top: calc(#{$ds} / 2);
+    & + a {
+      display: inline-block;
+      margin-top: calc(#{$ds} / 5);
     }
 }
 
 a {
-    text-decoration: none;
-    position: relative;
+    color: $primary;
+    text-decoration: underline;
+    text-decoration-color: $tertiary;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
     &:hover {
-        cursor: pointer;
-    }
-    &.l {
-        @include transitionall(.3s);
-        z-index: 1;
-        text-decoration: underline;
-        text-decoration-color: rgba(255,255,255,.5);
-        text-decoration-thickness: .05em;
-        text-underline-offset: 5px;
-        @include transitionall(.3s);
-        /*
-        &:before {
-            content: "";
-            position: absolute;
-            bottom: -1px;
-            height: 1px;
-            width: 100%;
-            opacity: 0.3;
-            background: $dancanettigrey;
-            @include transitionall(.3s);
-        }
-        */
-        &:hover {
-          text-decoration-color: $dancanettialt;
-          /*
-            &:before {
-                opacity: 1;
-                background: $dancanettialt;
-            }
-            */
-        }
-        &.alt {
-          color: $dancanettialt;
-        }
+      cursor: pointer;
+      text-decoration-thickness: 2px;
     }
 }
 
-button {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0 0 5px 0;
-  margin-top: 10px;
-  font-size: 1.25rem;
-  color: $dancanettiwhite;
-  text-decoration: none;
-  position: relative;
-  @include transitionall(.3s);
-  z-index: 1;
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: -1px;
-    height: 1px;
-    width: 100%;
-    opacity: 0.3;
-    background: $dancanettiwhite;
-    @include transitionall(.3s);
-  }
+abbr {
+  color: $primary;
+  text-decoration: underline;
+  text-decoration-color: $tertiary;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-decoration-style: dotted;
   &:hover {
     cursor: pointer;
-    &:before {
-      opacity: 1;
-      background: $dancanettialt;
-    }
+    text-decoration-style: dashed;
   }
 }
 
 .strong {
-    font-weight: $pfontbold;
-}
-
-hr {
-    box-shadow: none;
-    height: 0px;
-    width: 80%;
-    margin: 75px auto 25px 0;
+    font-weight: $fontbold;
 }
 
 blockquote {
     font-family: $serif;
-    margin: 75px 75px 5px 75px;
-    & + p {
-        margin: 25px 75px 75px 75px!important;
-        font-size: .7em;
-    }
-    @include sm {
-      margin: 75px 25px 5px 25px;
-      & + p {
-        margin: 25px 25px 75px 25px!important;
-      }
+    margin: $ds;
+    p {
+      margin: 0;
     }
 }
 
 code {
+  background-color: rgba(0,0,0,0.1);
+  font-size: 1rem;
   font-family: monospace;
   padding: 5px;
 }
 
 pre {
-  padding: 15px;
-  margin-top: 35px;
+  background-color: rgba(0,0,0,0.1);
+  margin: calc(#{$ds} / 2) 0;
+  padding: calc(#{$ds} / 2);
   width: 100%;
   overflow-y: scroll;
   code {
-    font-size: 1rem;
     background: transparent;
   }
 }
 
-s {   // Strikethrough
+s {
   opacity: 0.5;
 }
 
-.social-img {
-  height: .9rem;
-  @include transitionall(.3s);
-  &.hov-enabled {
-    &:hover {
-      fill: $dancanettialt;
-    }
+mark {
+  background: $tertiary;
+  color: $secondary;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+hr {
+  margin: 50px 0;
+  padding: 0;
+  border: none;
+  height: 1px;
+  background: $primary;
+  opacity: 0.5;
+  width: 100%;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 0;
+  background: $tertiary;
+  color: $secondary;
+  opacity: 1;
+  @include transitionall(0.3s);
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
   }
 }

@@ -1,49 +1,24 @@
 ---
-postTitle: Wordpressify
-#date: Last Modified
-date: 2019-05-09
-postTag: Web Development
-postFeatureImage: /dist/images/wordpressify.jpg
-postFeatureImageRetina: /dist/images/wordpressify@2x.jpg
-postExcerpt: A step-by-step guide to setting up WordPressify, a modern workflow for your WordPress development, and MySQL locally on Mac.
+pageTitle: Demo Post
+pageFeatureImage: /dist/images/demopost.jpg
+pageFeatureImageRetina: /dist/images/demopost@2x.jpg
+pageExcerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in euismod quam. Cras mollis ligula ut ex eleifend, a aliquet risus lobortis.
+postTag: Demo
+date: Last Modified
 ---
 
-WordPressify is a modern workflow for your WordPress development, with an integrated web server, that ties into GitHub, BitBucket and GitLab via [WP Pusher](https://wppusher.com/).
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis orci dignissim, maximus tortor ac, ullamcorper dolor. Nam et tempus felis. Duis sit amet felis ac orci porttitor vestibulum vel vel arcu. Fusce finibus placerat lorem, sit amet ultricies tellus consectetur vitae. Nullam at aliquam ipsum. Fusce ut scelerisque libero. Donec egestas, magna et porttitor viverra, nisl purus faucibus ex, id vulputate tellus mauris vitae neque. Maecenas ante ex, congue vitae suscipit vitae, finibus non ante. Cras mattis pretium lacus, ultrices pulvinar magna venenatis vestibulum. Fusce ullamcorper ligula quis sagittis faucibus. Fusce a libero at augue auctor fermentum. Nunc eu laoreet magna. Nulla in enim venenatis, mattis nibh nec, luctus lorem.
 
-## Setting up MySQL Locally
+Nullam facilisis a neque in molestie. Proin elit sapien, sagittis non leo id, faucibus ornare eros. Curabitur pharetra eros at sapien pharetra vulputate. Curabitur cursus nulla vel tellus molestie, quis ornare dolor euismod. Suspendisse id dui cursus, egestas orci sed, pharetra libero. Sed at tortor metus. Nullam gravida velit nunc, in elementum turpis finibus ut. Ut placerat nulla mollis vulputate egestas. Pellentesque non eros vel arcu bibendum tristique. Integer eget imperdiet ante. Cras pellentesque libero arcu, non lobortis nibh condimentum sit amet. In tempor ipsum nisi, sit amet ultrices tellus tempor eget.
 
-The easiest approach to setting up WordPressify is to have a local instance of MySQL installed, this runs on the Mac and can be controlled MySQL from System Preferences.
+## Donec a dignissim.
 
-* Download MySQL Community Server from the [official site](https://dev.mysql.com/downloads/mysql/).
-* Follow the installation instructions.
+Integer nulla magna, vehicula quis blandit eu, pharetra a felis. Pellentesque lacinia et nisl sagittis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ante ipsum, scelerisque vel ipsum quis, hendrerit ornare massa. Maecenas id vulputate nunc. In nec nisi at massa pretium fringilla.
 
-## Connecting to local MySQL via Sequel Pro
+Cras congue ex a metus consequat dictum. Morbi porta nulla sit amet facilisis malesuada. Cras ut ante aliquam, aliquam tortor vitae, porttitor massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum metus ante, ultricies vitae lacinia vehicula, varius at mauris. Phasellus hendrerit scelerisque metus sit amet porttitor. 
 
-I prefer to use Sequel Pro to connect to MySQL rather than using the command line. You can [download Sequel Pro for free here](https://www.sequelpro.com/).
+> Proin porttitor porta convallis. Vestibulum placerat, dui in sodales pellentesque, massa sem vestibulum felis, aliquam molestie mauris dolor vel augue.
 
-* Open Sequel Pro.
-* Choose the Socket option.
-* Enter the Username and Password you created during the MySQL install.
-* You should now be connected.
+Nullam hendrerit, metus eget elementum efficitur, augue massa venenatis arcu, non placerat dui urna et leo. Donec dapibus bibendum ipsum ut suscipit. Mauris ullamcorper neque dui, et varius odio cursus at. Pellentesque id magna rutrum arcu vestibulum elementum in a elit. Nam ac vestibulum justo. Praesent congue ut mi at iaculis. Quisque mattis scelerisque placerat. Etiam quis rhoncus velit.
 
-## Preparing to install WordPressify.
-
-* Create a new database.
-* Create a new user or assign a current user the correct privileges.
-* Keep note of the database name, username, and password. You’ll need these on the next step.
-
-## Installing WordPressify
-
-These instructions can be found on the [WordPressify website](https://www.wordpressify.co/), I’ve included here for ease of use. I have a folder which I use for my Laravel Homestead sites and install each instance in here to keep my workflow simple.
-
-* Using the command line navigate to your desired root directory.
-* Using the command line navigate to your desired root directory - `git clone https://github.com/luangjokaj/wordpressify`.
-* Install the NPM dependancies - `npm install`.
-* Change the template name. Open the gulpfile.js and edit this line: `const themeName = 'wordpressify';`.
-* Download the latest version of WordPress - `npm run install:wordpress`.
-* Start the workflow and complete the WordPress Install - `npm run dev`.
-* Connecting to local MySQL during the WordPress Install.
-  * Add the database, username, and password.
-  * Use `127.0.0.1` as the host.
-* Add your site name, user name and password for the initial user.
-* Your site should now be installed using WordPressify.
+Fusce rutrum, ipsum a pharetra pulvinar, tortor dui ultricies sapien, ut egestas leo lacus a purus. Fusce luctus ac mauris sed tempor. In laoreet rhoncus dolor, a porttitor lectus mattis sed. Donec fermentum vulputate ex, tristique eleifend dolor pulvinar id. Sed in vehicula ex. Nunc tortor nisl, mattis non odio ut, mollis finibus lectus. Suspendisse at ligula at nibh porttitor tempor. Pellentesque vehicula ornare metus feugiat porttitor.
