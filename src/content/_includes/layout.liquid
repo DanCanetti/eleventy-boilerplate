@@ -7,7 +7,7 @@
     <body class="{{ pageClass }}">
       <div class="wrapper">
         <header>
-          {% if pageClass != 'home' %}<span class="site-title">Eleventy Boilerplate</span>{% else %}<h1>Eleventy Boilerplate</h1>{% endif %}
+          {% if pageClass != 'home' %}<span class="site-title">{{ siteInfo.siteTitle }}</span>{% else %}<h1>{{ siteInfo.siteTitle }}</h1>{% endif %}
         </header>
         {% include nav %}
         {% if pageClass != 'home' %}<h1>{{ pageTitle }}</h1>{% endif %}

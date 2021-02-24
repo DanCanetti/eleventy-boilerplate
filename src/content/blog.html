@@ -1,13 +1,13 @@
 ---
 layout: layout.liquid
-pageTitle: Blog
+pageTitle: Supbage Demo
 pageClass: sub
 pageDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in euismod quam.
 ---
 
 <div class="body">
   <div class="body__section">
-    <p>This is a loop through all the posts.</p>
+    <p>Below is a loop through all the posts.</p>
     <div class="post-items__wrap">
       {% assign allblogposts = collections.posts %}
       {% for post in allblogposts limit: 4 %}
